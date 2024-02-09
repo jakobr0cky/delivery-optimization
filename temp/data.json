@@ -1,9 +1,0 @@
-GisWebControl.AjaxLoaded ('l120',
-{places : [
-        {Name : 'Schüttaustraße',Kategorie : 'Hauptstraße A',Hausnummer : '1-39/20',ObjektId : 0,AdressId : 10164520,BoundingBox : {Left : 6488.84,Bottom : 343563.99,Width : 0,Height : 0
-            },Location : {X : 6488.84,Y : 343563.99
-            },Bezirk : '22. Bezirk'
-        }
-    ],complete : true,nextIndex : 1,errorMessage : 0,WasBtnClick : false,index : 0
-});
-var x='';

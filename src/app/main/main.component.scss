@@ -25,3 +25,20 @@
     padding: 30px;
     font-weight: bold;
 }
+
+.scrollable-list {
+    width: 200px;
+    height: 200px; /* Adjust the height as needed */
+    overflow-y: scroll;
+    border: 1px solid #ccc;
+}
+.list-item {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    background-color:rgb(179, 177, 177);
+    font-weight: bold;
+}
+
+.list-item:hover {
+    cursor: pointer;
+}
