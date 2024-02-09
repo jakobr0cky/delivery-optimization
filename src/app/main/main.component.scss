@@ -1,0 +1,27 @@
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    flex-direction: column;
+    background-color: rgb(138, 124, 124);
+}
+
+.link{
+    margin-top: 10px;
+    font-size: 15;
+    border: 1px solid black;
+    width: 150px;
+    word-wrap: break-word;
+    background-color: rgb(141, 236, 157);
+}
+
+.inputField{
+    font-size: 15px;
+}
+
+.description{
+    font-size: 15px;
+    padding: 30px;
+    font-weight: bold;
+}
