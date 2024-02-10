@@ -1,11 +1,14 @@
 <div class="container">
-    <div class="description">Gib ganze Adresse mit Stiege ein ein. Wenn Adresse nicht Dropdown-Menü erscheint, gibt diese Adresse nicht bzw. findet
-        sie nicht. Beispiel Adresse: Schüttaustraße 1-39/1.
+    <div class="description">Gib ganze Adresse mit Stiege ein ein. Wenn Adresse nicht Dropdown-Menü erscheint, gibt
+        diese Adresse nicht bzw. findet
+        sie nicht. Beispiel Adresse: Schüttaustraße 1-39/1. Entweder nach Eingabe auf der Tastatur enter/öffnen drücken oder den Button. 
     </div>
-    <input list="adressList" #inputField class="inputField" (input)="updateDropdown($event)" (keydown.enter)="createGoogleMapsLink($event)" value="{{input}}">
+    <button (click)="createGoogleMapsLink()">Suchen</button>
+    <input list="adressList" #inputField class="inputField" (input)="updateDropdown($event)"
+        (keydown.enter)="createGoogleMapsLink($event)" value="{{input}}">
     <div class="scrollable-list">
         @for (item of options;track item) {
-            <div class="list-item" (click)="onItemClick($event)">{{item}}</div>
+        <div class="list-item" (click)="onItemClick($event)">{{item}}</div>
         }
     </div>
     <a class="link" *ngIf="googleMapsLink != '' " href="{{googleMapsLink}}">{{googleMapsLink}}</a>

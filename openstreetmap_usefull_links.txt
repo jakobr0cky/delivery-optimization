@@ -1,0 +1,19 @@
+https://nominatim.openstreetmap.org/search.php?q=sch%C3%BCttaustra%C3%9Fe%201-39&polygon_geojson=1&dedupe=0&limit=50&exclude_place_ids=370701285&format=jsonv2
+
+https://nominatim.openstreetmap.org/search.php?q=sch%C3%BCttaustra%C3%9Fe%201-39&polygon_geojson=1&dedupe=0&limit=50&format=jsonv2
+
+
+https://nominatim.openstreetmap.org/search.php?q=sch%C3%BCttaustra%C3%9Fe%201-39&polygon_geojson=1&dedupe=0&limit=50&exclude_place_ids=370701285&format=jsonv2
+
+https://nominatim.openstreetmap.org/search.php?q=sch%C3%BCttaustra%C3%9Fe%201-39&dedupe=0&limit=50&exclude_place_ids=0&format=jsonv2
+
+docker run -it
+  -e PBF_URL=https://download.geofabrik.de/europe/austria-latest.osm.pbf
+  -e REPLICATION_URL=https://download.geofabrik.de/europe/austria-updates/ 
+  -p 8080:8080 
+  --name nominatim 
+  mediagis/nominatim:4.3
+
+https://download.geofabrik.de/europe/austria.html
+
+docker run -it -e PBF_URL=https://download.geofabrik.de/europe/austria-latest.osm.pbf -e REPLICATION_URL=https://download.geofabrik.de/europe/austria-updates/ -p 8080:8080 --name nominatim_austria mediagis/nominatim:4.3
