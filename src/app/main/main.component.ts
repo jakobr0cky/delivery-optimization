@@ -3,6 +3,7 @@ import { default as proj4 } from 'proj4';
 import { CommonModule } from '@angular/common';
 import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatAutocompleteModule, MatAutocompleteTrigger } from '@angular/material/autocomplete';
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 
 @Component({
   selector: 'app-main',
@@ -15,9 +16,23 @@ export class MainComponent {
   input: string = '';
   options: string[] = [];
   googleMapsLink: string = '';
+  isPhonePortrait:boolean = false;
   @ViewChild('trigger') inputField!: MatAutocompleteTrigger;
 
-  constructor(private snackBar: MatSnackBar) { }
+  constructor(private snackBar: MatSnackBar,private responsive: BreakpointObserver) { }
+
+  ngOnInit(){
+    this.responsive.observe(Breakpoints.HandsetPortrait)
+    .subscribe(result => {
+
+      this.isPhonePortrait = false; 
+
+      if (result.matches) {
+        this.isPhonePortrait = true;
+      }
+
+});
+  }
 
   async updateDropdown(event: Event) {
     var element = event.target as HTMLInputElement;

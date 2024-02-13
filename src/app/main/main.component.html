@@ -1,12 +1,12 @@
 <div class="container">
-    <div class="info-card">
+    <div class="info-card" [ngStyle]="{'width': isPhonePortrait ? '350px' : '480px'}">
         Gib ganze Adresse mit Stiege ein ein. Wenn Adresse nicht Dropdown-Menü erscheint, gibt
         diese Adresse nicht bzw. findet
         sie nicht. Beispiel Adresse: Schüttaustraße 1-39/1. Entweder nach Eingabe auf der Tastatur enter/öffnen drücken
         oder den Button.
     </div>
     <div class="searchbar">
-        <span class="inputSpan" matAutocompleteOrigin #origin="matAutocompleteOrigin"
+        <span class="inputSpan" [ngStyle]="{'width': isPhonePortrait ? '350px' : '500px'}" matAutocompleteOrigin #origin="matAutocompleteOrigin"
             [class.focusedWithItems]="options.length > 0">
             <i class="material-icons">search</i>
             <input class="inputField" #trigger="matAutocompleteTrigger" [matAutocomplete]="auto" #inputField [matAutocompleteConnectedTo]="origin"
@@ -19,7 +19,7 @@
             }
         </mat-autocomplete>
     </div>
-    <div *ngIf="googleMapsLink" class="info-card">
+    <div *ngIf="googleMapsLink" class="info-card" [ngStyle]="{'width': isPhonePortrait ? '350px' : '480px'}">
         <a href="{{googleMapsLink}}">{{googleMapsLink}}</a>
     </div>
 </div>
