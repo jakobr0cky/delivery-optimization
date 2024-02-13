@@ -1,44 +1,118 @@
+body {
+    font-family: arial, sans-serif;
+}
+
 .container{
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 20px;
+    height: 100vh;
     flex-direction: column;
-    background-color: rgb(138, 124, 124);
 }
 
-.link{
-    margin-top: 10px;
-    font-size: 15;
-    border: 1px solid black;
-    width: 150px;
-    word-wrap: break-word;
-    background-color: rgb(141, 236, 157);
-}
-
-.inputField{
-    font-size: 15px;
-}
-
-.description{
-    font-size: 15px;
-    padding: 30px;
-    font-weight: bold;
-}
-
-.scrollable-list {
-    width: 200px;
-    height: 200px; /* Adjust the height as needed */
-    overflow-y: scroll;
-    border: 1px solid #ccc;
-}
-.list-item {
+.info-card{
+    max-width: 480px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border: 1px solid rgb(98, 202, 243);
+    border-radius: 10px;
     padding: 10px;
-    border-bottom: 1px solid #ccc;
-    background-color:rgb(179, 177, 177);
-    font-weight: bold;
+    color: rgb(243, 239, 239);
+    background-color: #202124;
+    font-size: 18px;
 }
 
-.list-item:hover {
-    cursor: pointer;
+.info-card a{
+    color: rgb(243, 239, 239);
+    background-color: #202124;
+    font-size: 18px;
+    max-width: 500px;
+    padding: 10px;
+    display: block;
+    overflow-wrap: break-word;
+}
+
+.searchbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.inputSpan {
+    background-color: #202124;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(98, 202, 243);
+    width: 500px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+}
+
+.focusedWithItems:has(.inputField:focus) {
+    border-bottom-left-radius: 0px !important;
+    border-bottom-right-radius: 0px !important;
+}
+
+.material-icons {
+    margin-left: 5px;
+    margin-right: 5px;
+    color: rgb(141, 139, 139);
+}
+
+.inputField {
+    background-color: #202124;
+    padding: 3px 5px 3px 10px;
+    color: rgb(243, 239, 239);
+    height: 100%;
+    width: 100%;
+    font-size: 18px;
+    border: none;
+}
+
+.inputSpan,
+.inputField {
+    border-radius: 20px;
+}
+
+.inputSpan:has(.inputField:hover) {
+    background-color: rgb(77, 75, 75);
+    border: none;
+}
+
+.inputSpan:has(.inputField:focus) {
+    background-color: rgb(77, 75, 75);
+    border: none;
+}
+
+.inputField:focus,
+.inputField:hover {
+    background-color: rgb(77, 75, 75);
+    border: none;
+    outline: none;
+}
+
+.inputField:hover {
+    cursor: text;
+}
+
+::ng-deep .mat-mdc-autocomplete-panel {
+    padding: 0px !important;
+    box-shadow: none !important;
+}
+
+.divider{
+    border: 1px solid rgb(98, 202, 243);
+}
+
+.option {
+    background-color: rgb(77, 75, 75);
+    font-size: 18px;
+    color: rgb(243, 239, 239);
+}
+
+.option:hover {
+    background-color: rgb(109, 106, 106) !important;
 }
